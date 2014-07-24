@@ -1,6 +1,6 @@
 {
   "name": "level-caql",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds CaQL query support to LevelUP.",
   "main": "querify.js",
   "scripts": {
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/kevinswiber/level-caql/issues"
   },
-  "homepage": "https://github.com/kevinswiber/level-caql"
+  "homepage": "https://github.com/kevinswiber/level-caql",
+  "dependencies": {
+    "caql-js-compiler": ">=0.0.1"
+  }
 }
