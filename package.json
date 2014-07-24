@@ -1,0 +1,25 @@
+{
+  "name": "level-caql",
+  "version": "0.0.1",
+  "description": "Adds CaQL query support to LevelUP.",
+  "main": "querify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kevinswiber/level-caql.git"
+  },
+  "keywords": [
+    "caql",
+    "leveldb",
+    "level",
+    "query"
+  ],
+  "author": "Kevin Swiber <kswiber@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinswiber/level-caql/issues"
+  },
+  "homepage": "https://github.com/kevinswiber/level-caql"
+}
