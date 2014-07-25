@@ -1,6 +1,6 @@
 {
   "name": "level-caql",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Adds CaQL query support to LevelUP.",
   "main": "querify.js",
   "scripts": {

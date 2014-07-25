@@ -21,10 +21,10 @@ var query =   'select name, founded_year, total_money_raised as worth '
 db.open(function() {
   var idCounter = 1;
   var ops = entries.map(function(entry) {
-    return { type: 'put', key: idCounter++, value: JSON.stringify(entry) };
+    return { type: 'put', key: idCounter++, value: entry };
   });
 
-  db.batch(ops, function(err) {
+  db.batch(ops, { valueEncoding: 'json' }, function(err) {
     db.find(query, function(err, results) {
       console.log(results);
     });

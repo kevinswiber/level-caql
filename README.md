@@ -32,10 +32,10 @@ var query =   'select name, founded_year, total_money_raised as worth '
 db.open(function() {
   var idCounter = 1;
   var ops = entries.map(function(entry) {
-    return { type: 'put', key: idCounter++, value: JSON.stringify(entry) };
+    return { type: 'put', key: idCounter++, value: entry };
   });
 
-  db.batch(ops, function(err) {
+  db.batch(ops, { valueEncoding: 'json' }, function(err) {
     db.find(query, function(err, results) {
       console.log(results);
     });
@@ -56,11 +56,13 @@ db.open(function() {
 
 The `level-caql` module adds a function to the LevelUP database, `db.find`.
 
-### db.find(query, callback)
+### db.find(query, [options], callback)
 
 Executes a query over a LevelUP database. Entries must be stringified JSON (for now). 
 
 `query`: A valid CaQL query string.  Learn more: [Calypso Query Language Specification](https://github.com/kevinswiber/caql).
+
+`options`: Passed through to [db.createReadStream()](https://github.com/rvagg/node-levelup#createReadStream).  If no `valueEncoding` is set, this module defaults to `json`.
 
 `callback`: A function that takes two parameters: `err` and `results`.  The `results` parameter is an array with objects found in the database.
 
