@@ -4,6 +4,8 @@ Adds CaQL query support to LevelUP.
 
 Learn more here: [Calypso Query Language Specification](https://github.com/kevinswiber/caql).
 
+[![Build Status](https://api.travis-ci.org/kevinswiber/level-caql.svg?branch=master)](https://travis-ci.org/kevinswiber/level-caql)
+
 ## Install
 
 `npm install level-caql`
