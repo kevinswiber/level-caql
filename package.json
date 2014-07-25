@@ -1,10 +1,10 @@
 {
   "name": "level-caql",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Adds CaQL query support to LevelUP.",
   "main": "querify.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha -R spec"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,10 @@
   "homepage": "https://github.com/kevinswiber/level-caql",
   "dependencies": {
     "caql-js-compiler": ">=0.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.0",
+    "memdown": "^0.10.2",
+    "level-packager": "^0.18.0"
   }
 }

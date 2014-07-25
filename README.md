@@ -2,6 +2,8 @@
 
 Adds CaQL query support to LevelUP.
 
+Learn more here: [Calypso Query Language Specification](https://github.com/kevinswiber/caql).
+
 ## Install
 
 `npm install level-caql`
@@ -60,7 +62,7 @@ The `level-caql` module adds a function to the LevelUP database, `db.find`.
 
 Executes a query over a LevelUP database. Entries must be stringified JSON (for now). 
 
-`query`: A valid CaQL query string.  Learn more: [Calypso Query Language Specification](https://github.com/kevinswiber/caql).
+`query`: A valid CaQL query string.
 
 `options`: Passed through to [db.createReadStream()](https://github.com/rvagg/node-levelup#createReadStream).  If no `valueEncoding` is set, this module defaults to `json`.
 
